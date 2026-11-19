@@ -1,4 +1,4 @@
-import { ShoppingCart } from "lucide-react";
+import { CircleEuro } from "lucide-react";
 const Navbar = () => {
   return (
     <div>
@@ -21,13 +21,8 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end">
-          <button className="btn btn-ghost btn-circle">
-            <div className="indicator">
-              <ShoppingCart />
-              <span className="badge badge-xs badge-gray-500 indicator-item">
-                0
-              </span>
-            </div>
+          <button className=" btn  ">
+            0 Coins <CircleEuro />
           </button>
         </div>
         <div className="navbar-end md:hidden">
