@@ -39,7 +39,11 @@ const FoodsContent = ({ foodPromise }) => {
       {selected === "available" ? (
         <div className="grid grid-cols-3 gap-12">
           {data.map((food) => (
-            <FoodCard food={food} key={food.id}></FoodCard>
+            <FoodCard
+              food={food}
+              key={food.id}
+             
+            ></FoodCard>
           ))}
         </div>
       ) : (

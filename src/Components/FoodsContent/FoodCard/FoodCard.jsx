@@ -1,7 +1,9 @@
-import React from "react";
 import { Star, MapPin } from "lucide-react";
+import { useState } from "react";
 
 const FoodCard = ({ food }) => {
+  const [isSelected, setIsSelected] = useState(false);
+  console.log(isSelected);
   return (
     <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 group">
       {/* Image */}
@@ -49,8 +51,12 @@ const FoodCard = ({ food }) => {
         <div className="flex items-center justify-between mt-5 pt-4 border-t border-gray-100">
           <p className="text-2xl font-bold text-orange-500">৳{food.price}</p>
 
-          <button className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-lg font-semibold transition">
-            Choose Food
+          <button
+            onClick={() => setIsSelected(true)}
+            disabled={isSelected ? true : false}
+            className={`${isSelected ? "" : "bg-orange-500"} btn   text-white px-5 py-2 rounded-lg font-semibold `}
+          >
+            {isSelected ? "Selected" : "Choose Food"}
           </button>
         </div>
       </div>
