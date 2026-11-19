@@ -1,0 +1,75 @@
+
+[
+  {
+    "id": 1,
+    "img": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600",
+    "name": "Classic Beef Burger",
+    "price": 350,
+    "ingredients": ["Beef Patty", "Cheese", "Lettuce", "Tomato", "Burger Bun"],
+    "restaurantName": "Burger House",
+    "rating": 4.8
+  },
+  {
+    "id": 2,
+    "img": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600",
+    "name": "Margherita Pizza",
+    "price": 550,
+    "ingredients": ["Pizza Dough", "Mozzarella", "Tomato Sauce", "Basil"],
+    "restaurantName": "Pizza Palace",
+    "rating": 4.7
+  },
+  {
+    "id": 3,
+    "img": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600",
+    "name": "Chicken Ramen",
+    "price": 420,
+    "ingredients": ["Noodles", "Chicken", "Egg", "Soy Sauce", "Vegetables"],
+    "restaurantName": "Tokyo Kitchen",
+    "rating": 4.6
+  },
+  {
+    "id": 4,
+    "img": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600",
+    "name": "Strawberry Cake",
+    "price": 280,
+    "ingredients": ["Flour", "Strawberry", "Cream", "Sugar", "Egg"],
+    "restaurantName": "Sweet Treats",
+    "rating": 4.9
+  },
+  {
+    "id": 5,
+    "img": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600",
+    "name": "Chicken Momos",
+    "price": 220,
+    "ingredients": ["Chicken", "Flour", "Onion", "Garlic", "Spices"],
+    "restaurantName": "Momo Corner",
+    "rating": 4.5
+  },
+  {
+    "id": 6,
+    "img": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600",
+    "name": "Fresh Vegetable Salad",
+    "price": 180,
+    "ingredients": ["Lettuce", "Cucumber", "Tomato", "Carrot", "Olive Oil"],
+    "restaurantName": "Green Garden",
+    "rating": 4.4
+  },
+  {
+    "id": 7,
+    "img": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=600",
+    "name": "Pepperoni Pizza",
+    "price": 650,
+    "ingredients": ["Pizza Dough", "Pepperoni", "Cheese", "Tomato Sauce"],
+    "restaurantName": "Pizza Palace",
+    "rating": 4.9
+  },
+  {
+    "id": 8,
+    "img": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600",
+    "name": "Cheese Pizza",
+    "price": 480,
+    "ingredients": ["Pizza Dough", "Mozzarella", "Cheddar", "Tomato Sauce"],
+    "restaurantName": "Italian Kitchen",
+    "rating": 4.7
+  }
+]
