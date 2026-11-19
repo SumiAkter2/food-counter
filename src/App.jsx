@@ -1,16 +1,24 @@
+import { Suspense } from "react";
 import "./App.css";
 import Banner from "./Components/Banner/Banner";
 import FoodsContent from "./Components/FoodsContent/FoodsContent";
 import Navbar from "./Components/Navbar/Navbar";
 
-function App() {
+const fetchFood = async () => {
+  const res = await fetch("/food.json");
 
-  
+  return res.json();
+};
+
+function App() {
+  const foodPromise = fetchFood();
   return (
     <>
       <Navbar />
       <Banner />
-      <FoodsContent />
+      <Suspense fallback={<p></p>}>
+        <FoodsContent foodPromise={foodPromise} />
+      </Suspense>
     </>
   );
 }
