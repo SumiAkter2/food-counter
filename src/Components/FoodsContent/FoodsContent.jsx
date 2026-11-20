@@ -51,7 +51,12 @@ const FoodsContent = ({ foodPromise, cart, setCart, coins, setCoins }) => {
           ))}
         </div>
       ) : (
-        <SelectedContent cart={cart} setCart={setCart}></SelectedContent>
+        <SelectedContent
+          cart={cart}
+          setCart={setCart}
+          coins={coins}
+          setCoins={setCoins}
+        ></SelectedContent>
       )}
     </div>
   );

@@ -5,7 +5,8 @@ const FoodCard = ({ food, cart, setCart, coins, setCoins }) => {
   const [isSelected, setIsSelected] = useState(false);
   // console.log(isSelected);
 
-  const handleChooseButton = () => {
+  const handleChooseButton = (food) => {
+    // e.preventDefault();
     setIsSelected(true);
 
     setCart([...cart, food]);
@@ -63,6 +64,7 @@ const FoodCard = ({ food, cart, setCart, coins, setCoins }) => {
           <p className="text-2xl font-bold text-orange-500">৳{food.price}</p>
 
           <button
+            type="button"
             onClick={() => handleChooseButton(food)}
             disabled={isSelected ? true : false}
             className={`${isSelected ? "" : "bg-orange-500"} btn   text-white px-5 py-2 rounded-lg font-semibold `}
