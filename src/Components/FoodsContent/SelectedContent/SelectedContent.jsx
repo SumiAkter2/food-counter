@@ -16,12 +16,16 @@ const SelectedContent = ({ cart, setCart, coins, setCoins }) => {
       {cart.map((food) => (
         <SelectedFood food={food} handleDeleteButton={handleDeleteButton} />
       ))}
-      <button
-        onClick={() => setCart([])}
-        className="w-full mt-6 bg-red-500 text-white py-3 rounded-lg font-semibold hover:bg-red-600 transition"
-      >
-        Delete All
-      </button>
+      {cart.length > 0 ? (
+        <button
+          onClick={() => setCart([])}
+          className="w-full mt-6 bg-red-500 text-white py-3 rounded-lg font-semibold hover:bg-red-600 transition"
+        >
+          Delete All
+        </button>
+      ) : (
+        <p className="text-center"> No Food selected !</p>
+      )}
     </div>
   );
 };

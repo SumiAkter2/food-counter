@@ -5,15 +5,23 @@ const FoodCard = ({ food, cart, setCart, coins, setCoins }) => {
   const [isSelected, setIsSelected] = useState(false);
   // console.log(isSelected);
 
-  const handleChooseButton = (food) => {
+  const handleChooseButton = () => {
     // e.preventDefault();
-    setIsSelected(true);
 
+    if (coins > food.price && coins !== 0) {
+      const addCoins = coins - food.price;
+      setCoins(addCoins);
+
+      alert("succesfully added");
+    } else {
+      alert("Sorry not enough Money for this food!");
+      return;
+    }
+    setIsSelected(true);
     setCart([...cart, food]);
     console.log(cart);
     // add coins
-    const addCoins = coins - food.price;
-    setCoins(addCoins);
+
     // console.log(addCoins);
   };
   return (
@@ -65,7 +73,7 @@ const FoodCard = ({ food, cart, setCart, coins, setCoins }) => {
 
           <button
             type="button"
-            onClick={() => handleChooseButton(food)}
+            onClick={handleChooseButton}
             disabled={isSelected ? true : false}
             className={`${isSelected ? "" : "bg-orange-500"} btn   text-white px-5 py-2 rounded-lg font-semibold `}
           >
