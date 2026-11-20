@@ -1,13 +1,19 @@
 import { Star, MapPin } from "lucide-react";
 import { useState } from "react";
 
-const FoodCard = ({ food, cart, setCart }) => {
+const FoodCard = ({ food, cart, setCart, coins, setCoins }) => {
   const [isSelected, setIsSelected] = useState(false);
   // console.log(isSelected);
 
   const handleChooseButton = () => {
     setIsSelected(true);
-    console.log("object",);
+
+    setCart([...cart, food]);
+    console.log(cart);
+    // add coins
+    const addCoins = coins - food.price;
+    setCoins(addCoins);
+    // console.log(addCoins);
   };
   return (
     <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 group">
@@ -57,7 +63,7 @@ const FoodCard = ({ food, cart, setCart }) => {
           <p className="text-2xl font-bold text-orange-500">৳{food.price}</p>
 
           <button
-            onClick={handleChooseButton}
+            onClick={() => handleChooseButton(food)}
             disabled={isSelected ? true : false}
             className={`${isSelected ? "" : "bg-orange-500"} btn   text-white px-5 py-2 rounded-lg font-semibold `}
           >

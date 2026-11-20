@@ -12,15 +12,22 @@ const fetchFood = async () => {
 };
 
 function App() {
-  const [cart, setCart] = useState(0);
+  const [cart, setCart] = useState([]);
+  const [coins, setCoins] = useState(5000);
 
   const foodPromise = fetchFood();
   return (
     <>
-      <Navbar />
+      <Navbar coins={coins} />
       <Banner />
       <Suspense fallback={<p></p>}>
-        <FoodsContent foodPromise={foodPromise} cart={cart} setCart={setCart} />
+        <FoodsContent
+          foodPromise={foodPromise}
+          cart={cart}
+          setCart={setCart}
+          coins={coins}
+          setCoins={setCoins}
+        />
       </Suspense>
       <Footer />
     </>

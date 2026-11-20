@@ -1,5 +1,5 @@
 import { CircleEuro } from "lucide-react";
-const Navbar = () => {
+const Navbar = ({ coins }) => {
   return (
     <div>
       <div className="navbar bg-base-100 shadow-sm">
@@ -22,7 +22,7 @@ const Navbar = () => {
 
         <div className="navbar-end">
           <button className=" btn  ">
-            0 Coins <CircleEuro />
+            {coins} Coins <CircleEuro />
           </button>
         </div>
         <div className="navbar-end md:hidden">

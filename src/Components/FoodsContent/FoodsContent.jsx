@@ -2,13 +2,13 @@ import { use, useState } from "react";
 import FoodCard from "./FoodCard/FoodCard";
 import SelectedContent from "./SelectedContent/SelectedContent";
 
-const FoodsContent = ({ foodPromise, cart, setCart }) => {
+const FoodsContent = ({ foodPromise, cart, setCart, coins, setCoins }) => {
   const [selected, setSelected] = useState("available");
 
   const data = use(foodPromise);
-  console.log(data);
+  // console.log(data);
   // console.log(selected);
-  console.log(cart);
+  // console.log(cart);
 
   return (
     <div className="mx-12 ">
@@ -16,7 +16,7 @@ const FoodsContent = ({ foodPromise, cart, setCart }) => {
         {selected === "available" ? (
           <h1 className="text-3xl my-12">Available Food</h1>
         ) : (
-          <h1 className="text-3xl my-12">Selected Food: {cart}/8</h1>
+          <h1 className="text-3xl my-12">Selected Food: {cart.length}/8</h1>
         )}
 
         <div>
@@ -32,7 +32,7 @@ const FoodsContent = ({ foodPromise, cart, setCart }) => {
               onClick={() => setSelected("selected")}
               className={`${selected === "selected" ? " bg-orange-500" : " bg-gray-200"}  btn  text-black rounded-l-0 px-5 py-2 rounded-r-xl font-semibold`}
             >
-              Selected ({cart})
+              Selected ({cart.length})
             </button>
           </div>
         </div>
@@ -45,6 +45,8 @@ const FoodsContent = ({ foodPromise, cart, setCart }) => {
               key={food.id}
               cart={cart}
               setCart={setCart}
+              coins={coins}
+              setCoins={setCoins}
             ></FoodCard>
           ))}
         </div>
