@@ -37,7 +37,7 @@ const FoodsContent = ({ foodPromise, cart, setCart, coins, setCoins }) => {
           </div>
         </div>
       </div>
-      {selected === "available" && (
+      {selected === "available" ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-6">
           {data.map((food) => (
             <FoodCard
@@ -50,8 +50,7 @@ const FoodsContent = ({ foodPromise, cart, setCart, coins, setCoins }) => {
             ></FoodCard>
           ))}
         </div>
-      )}{" "}
-      {cart.length > 0 ? (
+      ) : cart.length > 0 ? (
         <SelectedContent
           cart={cart}
           setCart={setCart}
