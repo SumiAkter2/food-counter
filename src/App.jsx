@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import "./App.css";
 import Banner from "./Components/Banner/Banner";
 import FoodsContent from "./Components/FoodsContent/FoodsContent";
@@ -12,13 +12,15 @@ const fetchFood = async () => {
 };
 
 function App() {
+  const [cart, setCart] = useState(0);
+
   const foodPromise = fetchFood();
   return (
     <>
       <Navbar />
       <Banner />
       <Suspense fallback={<p></p>}>
-        <FoodsContent foodPromise={foodPromise} />
+        <FoodsContent foodPromise={foodPromise} cart={cart} setCart={setCart} />
       </Suspense>
       <Footer />
     </>
