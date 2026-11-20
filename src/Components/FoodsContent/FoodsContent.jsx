@@ -22,14 +22,14 @@ const FoodsContent = ({ foodPromise }) => {
           <div className="flex items-center ">
             <button
               onClick={() => setSelected("available")}
-              className={`${selected === "available" ? " bg-orange-500" : " bg-gray-200"}  btn   text-black px-5 py-2 rounded-r-0 rounded-l-lg font-semibold`}
+              className={`${selected === "available" ? " bg-orange-500" : " bg-gray-200"}  btn   text-black px-5 py-2 rounded-r-0 rounded-l-xl font-semibold`}
             >
               Available
             </button>
 
             <button
               onClick={() => setSelected("selected")}
-              className={`${selected === "selected" ? " bg-orange-500" : " bg-gray-200"}  btn  text-black rounded-l-0 px-5 py-2 rounded-l-lg font-semibold`}
+              className={`${selected === "selected" ? " bg-orange-500" : " bg-gray-200"}  btn  text-black rounded-l-0 px-5 py-2 rounded-r-xl font-semibold`}
             >
               Selected (0)
             </button>
