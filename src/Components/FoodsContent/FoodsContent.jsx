@@ -12,7 +12,7 @@ const FoodsContent = ({ foodPromise, cart, setCart, coins, setCoins }) => {
 
   return (
     <div className="mx-12 ">
-      <div className="flex justify-between items-center">
+      <div className="md:flex justify-between items-center my-6">
         {selected === "available" ? (
           <h1 className="text-3xl my-12">Available Food</h1>
         ) : (
@@ -38,7 +38,7 @@ const FoodsContent = ({ foodPromise, cart, setCart, coins, setCoins }) => {
         </div>
       </div>
       {selected === "available" && (
-        <div className="grid grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-6">
           {data.map((food) => (
             <FoodCard
               food={food}

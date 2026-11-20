@@ -2,7 +2,7 @@ import { CircleEuro } from "lucide-react";
 const Navbar = ({ coins }) => {
   return (
     <div>
-      <div className="navbar bg-base-100 shadow-sm">
+      <div className="navbar bg-base-100 shadow-sm ">
         <div className="navbar-start">
           <a className="btn btn-ghost text-xl">daisyUI</a>
         </div>
@@ -25,7 +25,7 @@ const Navbar = ({ coins }) => {
             {coins} Coins <CircleEuro />
           </button>
         </div>
-        <div className="navbar-end md:hidden">
+        <div className="navbar-end md:hidden z-50">
           <div className="dropdown dropdown-end">
             <div
               tabIndex={0}
